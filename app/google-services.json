@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "580019027681",
+    "firebase_url": "https://myplayer-e9d4e.firebaseio.com",
+    "project_id": "myplayer-e9d4e",
+    "storage_bucket": "myplayer-e9d4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580019027681:android:78cbe830d735695a",
+        "android_client_info": {
+          "package_name": "avani07.myyoutubeplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580019027681-j76avg85kf2m312k8gorv89bb3teln69.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "avani07.myyoutubeplayer",
+            "certificate_hash": "3f57dc7f9decc90dfcc818a4b346f264c573f954"
+          }
+        },
+        {
+          "client_id": "580019027681-f3e27afrkpg7hhho5mmekbhu98658320.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvCDjrLWB2ciUA8odRtgOsyl8bGB_3pro"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580019027681-f3e27afrkpg7hhho5mmekbhu98658320.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

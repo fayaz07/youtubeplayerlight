@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <!-- Layout to contain contents of main body of screen (drawer will slide over this) -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
+
+            <Button
+                android:layout_width="24dp"
+                android:id="@+id/homeButtonYoutubePlayer"
+                android:layout_height="24dp"
+                android:clickable="true"
+                android:onClick="actionHomeClicked"
+                android:contextClickable="true"
+                android:background="@drawable/ic_menu_black_24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Youtube Player"
+                android:textSize="20dp"
+                android:layout_marginStart="35dp"
+                android:textColor="#fff"/>
+        </android.support.v7.widget.Toolbar>
+
+    </FrameLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/nav_header"/>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YoutubePlayer">
+
+
+        <view
+            android:id="@+id/myplayer"
+            class="com.google.android.youtube.player.YouTubePlayerView"
+            layout_alignParentStart="true"
+            layout_alignParentTop="true"
+            layout_centerHorizontal="true"
+            layout_marginStart="0dp"
+            layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="56dp" />
+
+        <TextView
+            android:id="@+id/urlView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignStart="@+id/videoName"
+            android:layout_marginBottom="78dp"
+            android:text="Url"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/videoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="137dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginRight="10dp"
+            android:text="Video Name"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/buttonYoutube"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/prevButton"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_skip_previous_black_24dp" />
+
+            <Button
+                android:id="@+id/rewindButton"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_fast_rewind_black_24dp" />
+
+            <Button
+                android:id="@+id/pauseButton"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_pause_circle_filled_black_24dp" />
+
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_play_circle_filled_black_24dp" />
+
+            <Button
+                android:id="@+id/forButton"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_fast_forward_black_24dp" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_skip_next_black_24dp" />
+
+        </LinearLayout>
+<!--
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView18"
+            android:layout_marginBottom="128dp"
+            android:text="No. of times played:"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/buttonYoutube"
+            android:layout_alignTop="@+id/textView12"
+            android:text="0"
+            android:layout_marginRight="35dp"
+            android:textAlignment="viewEnd"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/buttonYoutube"
+            android:layout_marginBottom="88dp"
+            android:layout_marginLeft="25dp"
+            android:text="Last watched duration:"
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/lastwatchduration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/buttonYoutube"
+            android:layout_alignTop="@+id/textView18"
+            android:text="0"
+            android:layout_marginRight="35dp"
+            android:textAlignment="viewEnd"
+            android:textSize="18sp" />  -->
+<!--
+        <Button
+            android:id="@+id/favadd"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="198dp"
+            android:layout_marginEnd="18dp"
+            android:text="Add to Favourites"
+            android:textSize="10sp" />
+-->
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>
