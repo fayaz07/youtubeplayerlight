@@ -6,10 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginRight="10dp"
     android:layout_marginLeft="10dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginBottom="1dp"
     android:id="@+id/cardView"
-    android:alpha="250"
     app:cardCornerRadius="@dimen/cardview_default_elevation">
 
 <RelativeLayout
@@ -19,7 +18,7 @@
             android:id="@+id/imageView"
             android:layout_width="150dp"
             android:layout_height="100dp"
-            android:padding="6dp" />
+            android:padding="5dp" />
 
     <TextView
         android:id="@+id/titleVideo"
@@ -31,7 +30,7 @@
         android:text="Title of the video"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
         android:textColor="#000000"
-        android:textSize="19sp" />
+        android:textSize="17sp" />
 
         <TextView
             android:id="@+id/url"
@@ -42,7 +41,7 @@
             android:layout_marginTop="3dp"
             android:layout_toRightOf="@id/imageView"
             android:text="url of video"
-            android:textSize="16dp"
+            android:textSize="12dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 
     </RelativeLayout>
